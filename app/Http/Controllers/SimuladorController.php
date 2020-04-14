@@ -29,7 +29,7 @@ class SimuladorController extends Controller
             $this->simulacao[$dados->instituicao][] = [
                 "taxa"            => $dados->taxaJuros,
                 "parcelas"        => $dados->parcelas,
-                "valorParcela"    => $this->calcularValorDaParcela($valorEmprestimo, $dados->coeficiente),
+                "valor_parcela"    => $this->calcularValorDaParcela($valorEmprestimo, $dados->coeficiente),
                 "convenio"        => $dados->convenio,
             ];
         }
