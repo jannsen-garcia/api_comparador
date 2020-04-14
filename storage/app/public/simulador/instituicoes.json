@@ -1,20 +1,14 @@
 [
     {
-        "instituicao": {
-            "chave": "PAN",
-            "valor": "Pan"
-        }
+        "chave": "PAN",
+        "valor": "Pan"
     },
     {
-        "instituicao": {
-            "chave": "OLE",
-            "valor": "Ole"
-        }
+        "chave": "OLE",
+        "valor": "Ole"
     },
     {
-        "instituicao": {
-            "chave": "BMG",
-            "valor": "Bmg"
-        }
+        "chave": "BMG",
+        "valor": "Bmg"
     }
 ]

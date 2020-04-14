@@ -18,4 +18,6 @@ Route::get('/', function () {
 });
 
 Route::post('simular', "SimuladorController@simular");
+Route::get('instituicao', "InstituicaoController@all");
+Route::get('convenio', "ConvenioController@all");
 
