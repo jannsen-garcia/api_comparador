@@ -1,0 +1,20 @@
+[
+    {
+        "instituicao": {
+            "chave": "PAN",
+            "valor": "Pan"
+        }
+    },
+    {
+        "instituicao": {
+            "chave": "OLE",
+            "valor": "Ole"
+        }
+    },
+    {
+        "instituicao": {
+            "chave": "BMG",
+            "valor": "Bmg"
+        }
+    }
+]
