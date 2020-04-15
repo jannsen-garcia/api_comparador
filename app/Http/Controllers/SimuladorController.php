@@ -13,6 +13,7 @@ class SimuladorController extends Controller
     {
         $this->carregarArquivoDadosSimulador()
              ->simularEmprestimo($request->valor_emprestimo)
+             ->filtrarInstituicao($request->instituicoes)
         ;
         return \response()->json($this->simulacao);
     }
@@ -39,5 +40,22 @@ class SimuladorController extends Controller
     private function calcularValorDaParcela(float $valorEmprestimo, float $coeficiente) : float
     {
         return round($valorEmprestimo * $coeficiente, 2);
+    }
+
+    private function filtrarInstituicao(array $instituicoes) : self
+    {
+        if (\count($instituicoes))
+        {
+            $arrayAux = [];
+            foreach ($instituicoes AS $key => $instituicao)
+            {
+                if (\array_key_exists($instituicao, $this->simulacao))
+                {
+                     $arrayAux[$instituicao] = $this->simulacao[$instituicao];
+                }
+            }
+            $this->simulacao = $arrayAux;
+        }
+        return $this;
     }
 }
